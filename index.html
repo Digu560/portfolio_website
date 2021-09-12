@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            text-align: center;
+            font-family: Source Sans Pro;
+
+        }
+
+        header {
+            background: #f8f8f8;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 1em 0px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            padding: 0px;
+
+            align-items: center;
+        }
+
+        .logoheading {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            color: #143774;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 1em;
+            align-items: center;
+            background: #f8f8f8;
+        }
+
+        .navbar {
+            width: 53%;
+            max-width: 324px;
+        }
+
+        .navbar ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #707070;
+            font-size: 0.7rem;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #1792d2;
+            border-bottom: 2px solid #707070;
+        }
+
+        .navbar ul li {
+            padding: 0.3em;
+        }
+
+        /* my-services */
+        .my-services {
+            background-color: #303030;
+            color: white;
+        }
+
+        /* footer */
+        footer {
+            background-color: #303030;
+        }
+
+        .footer__link {
+            text-decoration: none;
+            color: white;
+        }
+
+        .about-me img {
+            height: 20em;
+            margin: 0 auto;
+        }
+
+        .portfolio img {
+            margin: 0 auto;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+
+        /* intro */
+        .intro {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .introtext {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .intro_title {
+            font-family: Source Sans Pro;
+            font-weight: lighter;
+            color: #303030;
+            margin: 0;
+            font-size: 2.2rem;
+
+        }
+
+        .intro_title strong {
+            font-weight: 700;
+        }
+
+        .intro_subtitle {
+            font-family: Source Code pro;
+            color: #1C4B43;
+            background-color: #16E0BD;
+            width: 84%;
+            height: 2em;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.3em;
+        }
+
+        .intro img {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        /* services */
+        .services_title {
+            color: #14CFAE;
+            font-family: Source Sans Pro;
+            font-size: 4.2rem;
+            padding-top: 0.5em;
+            border-bottom: 2px solid white;
+            margin-bottom: 0;
+        }
+
+        .service {
+            margin: 0 auto;
+        }
+
+        .service h3 {
+            font-size: 2rem;
+        }
+
+        .service p {
+            width: 85%;
+            margin: 0 auto;
+            font-size: larger;
+        }
+
+        .btn {
+            text-decoration: none;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            width: 70%;
+            margin-top: 0.4em;
+            margin-bottom: 0.4em;
+            color: #303030;
+            background-color: #16E0BD;
+            font-size: 2rem;
+            /* padding: 0.3em; */
+            font-family: Source Sans Pro;
+        }
+
+        .btn h3 {
+            margin: 0;
+            padding: 0.2em;
+        }
+
+        /* about */
+        .about_title {
+            font-family: Source Sans Pro;
+            font-size: 4.2rem;
+            border-bottom: 2px solid black;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .about-me h3 {
+            font-size: 2rem;
+        }
+
+        .about-me__body {
+            width: 85%;
+            margin: 0 auto;
+            font-size: larger;
+        }
+
+        /* mywork */
+        .section__title {
+            color: #14CFAE;
+            font-family: Source Sans Pro;
+            font-size: 4.2rem;
+            padding-top: 0.5em;
+            border-bottom: 2px solid white;
+            margin-bottom: 0;
+        }
+
+        .social-list {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        .social-list li a i {
+            color: white;
+        }
+
+        @media (min-width:770px) {
+            * {
+                padding: 5px;
+            }
+
+            .container {
+                flex-direction: row;
+            }
+
+            /* intro */
+            .intro {
+                display: flex;
+                flex-direction: row;
+                width: 60%;
+                padding: 2em;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            .introtext,
+            .introimg {
+                font-size: 1.8rem;
+                width: 50%;
+            }
+
+            /* services */
+            .my-services {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .services {
+                display: flex;
+                width: 90%;
+                justify-content: space-around;
+            }
+
+            .service {
+                width: 31%;
+                margin: 0 0;
+            }
+
+            .service h3 {
+                font-size: 1.5rem;
+            }
+
+            .services_title {
+                font-size: 2.2rem;
+                margin-top: 0;
+                padding: 0.5em;
+                width: 20%;
+            }
+
+            .service p {
+                width: 100%;
+
+            }
+
+            .btn {
+                width: 20%;
+                padding: 0px;
+                font-size: 1.5rem;
+            }
+
+            /* about-me */
+            .about-me {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .about_title {
+                font-size: 2.5rem;
+            }
+
+            .aboutmecontainer {
+                display: flex;
+            }
+
+            .about_subtitle {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* my-work */
+            .my-services {
+                padding: 0;
+            }
+
+            .section__title {
+                font-size: 2.2rem;
+                margin-top: 0;
+
+            }
+
+            .portfolio {
+                display: flex;
+                flex-direction: column;
+                width: 55%;
+            }
+
+            .firstfour,
+            .secondfour {
+                display: flex;
+            }
+
+            /* footer */
+
+        }
+
+        @media (min-width:540px) {
+
+            img {
+                margin: 0px auto;
+            }
+
+            .navbar {
+                width: 50%;
+                max-width: 286px;
+            }
+
+            .navbar ul {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleleapis.com/css?family=lora|Ubuntu:400,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <title>DSC | Personal website</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <h3 class="logoheading">
+                &lt;DSC&gt;
+            </h3>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li class="listitem"><a href="home.html"><strong>HOME</strong> </a> </li>
+                <li class="listitem"><a href="aboutme.html"><strong>ABOUT ME</strong> </a> </li>
+                <li class="listitem"><a href="recent.html"><strong>RECENT POSTS</strong> </a> </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="intro" id="home">
+        <div class="introtext">
+            <h1 class="intro_title">
+                Hi, I am <br> <strong>DIGVIJAY SINH CHAUHAN</strong>
+            </h1>
+            <p class="intro_subtitle">FRONT-END DEV</p>
+        </div>
+        <div class="introimg">
+            <img src="myfinalpic.jpg" alt="a picture of DIGVIJAY">
+        </div>
+    </section>
+    <section class="my-services" id="services">
+        <h2 class="services_title">What I do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>Competitive programming</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div> <!-- / service -->
+
+            <div class="service">
+                <h3>React JS</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+            </div> <!-- / service -->
+        </div> <!-- / services -->
+
+        <a href="#work" class="btn">
+            <h3>My Work</h3>
+        </a>
+    </section>
+    <section class="about-me" id="about">
+        <div class="about___title">
+            <h2 class="about_title">Who I am</h2>
+        </div>
+        <div class="aboutmecontainer">
+            <div class="container2">
+
+                <h3 class="about_subtitle">
+                    Web developer and programmer
+                </h3>
+
+
+                <div class="about-me__body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam officiis, maiores consequuntur
+                        esse velit vel assumenda dignissimos tempore! Sunt, laboriosam!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nihil minus eveniet voluptate sit.
+                        Doloribus officia odio quas deserunt accusantium soluta delectus quae, quidem sint amet, ex
+                        corporis? Sint, odio.</p>
+
+                </div>
+            </div>
+
+            <img src="mypic2.jpg" alt="Jane leaning against a bus">
+        </div>
+    </section>
+    <section class="my-services" id="work">
+        <h2 class="section__title">My work</h2>
+        <p class="section__subtitle"></p>
+
+        <div class="portfolio">
+            <!-- Portfolio item 01 -->
+            <div class="firstfour">
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3.png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Portfolio item 02 -->
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(1).png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Portfolio item 03 -->
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(2).png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Portfolio item 04 -->
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(3).png" alt="" class="portfolio__img">
+                </a>
+            </div>
+            <!-- Portfolio item 05 -->
+            <div class="secondfour">
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(4).png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Portfolio item 06 -->
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(5).png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Portfolio item 07 -->
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(6).png" alt="" class="portfolio__img">
+                </a>
+
+                <!-- Portfolio item 08 -->
+                <a href="https://digu650.github.io/myfirstresponsivewebsite/" class="portfolio__item">
+                    <img src="Rectangle 3(7).png" alt="" class="portfolio__img">
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <!-- replace with your own email address -->
+        <a href="mailto:dsc13103@gmail.com" class="footer__link">dsc13103@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a class="social-list__link"
+                    href="linkedin.com/in/digvijay-sinh-c-832420131"><i class="fab fa-linkedin"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://github.com/Digu650"><i
+                        class="fab fa-github"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://twitter.com"><i
+                        class="fab fa-twitter"></i></a></li>
+        </ul>
+    </footer>
+
+    </header>
+</body>
+
+</html>
